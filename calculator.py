@@ -1,36 +1,39 @@
 # calculator.py
+"""
+A simple command-line calculator to perform basic arithmetic operations.
+"""
 
-def add(x,y):
-    """A function to add two numbers"""
-    return x+y
+def add(x, y):
+    """Return the sum of two numbers."""
+    return x + y
 
 def subtract(x, y):
-    """A function to subtract two numbers"""
+    """Return the difference of two numbers."""
     return x - y
 
 def multiply(x, y):
-    """A function to multiply two numbers"""
+    """Return the product of two numbers."""
     return x * y
 
 def divide(x, y):
-    """A function to divide two numbers"""
+    """
+    Return the quotient of two numbers.
+    Handles division by zero.
+    """
     if y == 0:
         return "Error! Division by zero."
     return x / y
 
 def main():
+    """Main function to run the calculator."""
     print("Simple Calculator")
-    a = int(input("Enter first number: "))
-    b = int(input("Enter second number: "))
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
 
-    print("Sum:", add(a,b))
-    print("Difference:", subtract(a, b))
-    print("Product:", multiply(a, b))
-    print("Quotient:", divide(a, b))
-
-    # This is a long line that pylint will flag just for demonstration purposes to show how it works.
-    long_variable_name_for_no_good_reason = "This is just to make the line exceed the character limit for pylint."
-    print(long_variable_name_for_no_good_reason)
+    print(f"Sum: {add(num1, num2)}")
+    print(f"Difference: {subtract(num1, num2)}")
+    print(f"Product: {multiply(num1, num2)}")
+    print(f"Quotient: {divide(num1, num2)}")
 
 if __name__ == "__main__":
     main()
