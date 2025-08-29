@@ -52,7 +52,7 @@ def analyze_bug_commits():
                     llm_result = llm(llm_input)
                     llm_inference = llm_result[0]['generated_text'] if llm_result else "LLM failed"
 
-                    # Your Rectifier logic goes here
+                    # Rectifier logic 
                     rectified_message = f"[{modified_file.new_path}] {llm_inference}"
 
                     # Write the detailed analysis for the file to the CSV
